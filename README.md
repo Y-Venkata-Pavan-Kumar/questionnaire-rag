@@ -406,11 +406,11 @@ streamlit run frontend/app.py
 # 14. Live Demo
 
 Live Application
-(https://questionnaire-rag.onrender.com)
+(https://questionnaire-rag-1.onrender.com)
 
 API docs
 
-(https://questionnaire-rag.onrender.com/docs)
+(https://questionnaire-rag-1.onrender.com/docs)
 ---
 
 # 15. Repository
