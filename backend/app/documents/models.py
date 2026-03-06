@@ -13,5 +13,5 @@ class Document(Base):
     user_id = Column(Integer, ForeignKey("users.id"))
     filename = Column(String)
     file_path = Column(String)
-    doc_type = Column(String)  # 'reference' or 'questionnaire'
+    doc_type = Column(String)
     upload_date = Column(DateTime, default=datetime.utcnow)

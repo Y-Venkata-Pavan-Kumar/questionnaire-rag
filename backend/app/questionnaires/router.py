@@ -6,14 +6,14 @@ import os
 import uuid
 
 # Use consistent imports - always from app
-from app.database import get_db
-from app.auth.router import get_current_user
-from app.documents import processor
-from app.rag.engine import RAGEngine
-from app.questionnaires import models, exporter
-from app.config import settings
-from app.documents import models as doc_models
-from app.documents.processor import DocumentProcessor
+from backend.app.database import get_db
+from backend.app.auth.router import get_current_user
+from backend.app.documents import processor
+from backend.app.rag.engine import RAGEngine
+from backend.app.questionnaires import models, exporter
+from backend.app.config import settings
+from backend.app.documents import models as doc_models
+from backend.app.documents.processor import DocumentProcessor
 
 router = APIRouter(prefix="/questionnaires", tags=["questionnaires"])
 
@@ -122,8 +122,8 @@ async def process_questionnaire(
     # Process with RAG - load reference documents directly
     api_key = settings.GROQ_API_KEY or settings.OPENAI_API_KEY
     rag = RAGEngine(api_key=api_key)
-    from app.documents.models import Document
-    from app.documents import processor, chunker
+    from backend.app.documents.models import Document
+    from backend.app.documents import processor, chunker
 
     reference_docs = db.query(Document).filter(
         Document.user_id == current_user.id,

@@ -4,9 +4,9 @@ from sqlalchemy.orm import Session
 
 # Use try-except for flexibility
 try:
-    from app.database import get_db
-    from app.auth import models, schemas, utils
-    from app.config import settings
+    from backend.app.database import get_db
+    from backend.app.auth import models, schemas, utils
+    from backend.app.config import settings
 except ImportError:
     from backend.app.database import get_db
     from backend.app.auth import models, schemas, utils
