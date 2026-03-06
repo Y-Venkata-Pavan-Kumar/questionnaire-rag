@@ -3,7 +3,7 @@ import requests
 import os
 
 # API configuration
-API_URL = "http://localhost:8000/api"
+API_URL = "https://questionnaire-rag-1.onrender.com"
 
 # Page setup
 st.set_page_config(
