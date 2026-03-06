@@ -3,7 +3,7 @@ uvicorn
 streamlit
 requests
 
-sentence-transformers==2.7.0
+
 huggingface-hub
 
 scikit-learn
