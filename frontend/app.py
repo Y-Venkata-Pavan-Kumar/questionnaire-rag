@@ -117,17 +117,8 @@ def show_login():
                     }
                 )
                 if response and response.status_code == 200:
-                    data = response.json()
-                    token = data["access_token"]
-
-                    st.session_state.token = token
-                    st.session_state.user_email = email
-                    st.session_state.current_page = "dashboard"
-
-                    # Save token + page in URL
-                    st.query_params["token"] = token
-                    st.query_params["page"] = "dashboard"
-
+                    st.success("✅ Account created successfully! Please login.")
+                    st.session_state.current_page = "login"
                     st.rerun()
                 else:
                     st.error("Could not create account")
