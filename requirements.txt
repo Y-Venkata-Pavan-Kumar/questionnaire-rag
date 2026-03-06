@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+streamlit
+sentence-transformers
+groq
+python-dotenv
+sqlalchemy
+pydantic
+requests
+python-multipart
+pypdf
+pdfplumber
+python-jose
+passlib[bcrypt]
+email-validator
+streamlit-cookies-manager
