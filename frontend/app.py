@@ -264,7 +264,7 @@ def show_review():
     st.markdown('<p class="main-header">✏️ Review Answers</p>', unsafe_allow_html=True)
     
     # Fetch data
-    response = make_request("GET", f"/questionnaires/{q_id}/review")
+    response = make_request("GET", f"/api/questionnaires/{q_id}/review")
     if not response or response.status_code != 200:
         st.error("Could not load questionnaire")
         return
@@ -336,7 +336,7 @@ def show_review():
             for qid, answer in edited_answers.items():
                 resp = make_request(
                     "POST",
-                    f"/questionnaires/{q_id}/update-answer",
+                    f"/api/questionnaires/{q_id}/update-answer",
                     data={"question_id": qid, "final_answer": answer}
                 )
                 if resp and resp.status_code == 200:
@@ -353,7 +353,7 @@ def show_review():
             with st.spinner("Generating file..."):
                 resp = make_request(
                     "POST",
-                    f"/questionnaires/{q_id}/export?format={export_format}"
+                    f"/api/questionnaires/{q_id}/export?format={export_format}"
                 )
                 if resp and resp.status_code == 200:
                     # Get filename from headers
@@ -372,7 +372,7 @@ def show_references():
     st.markdown('<p class="main-header">📚 Reference Documents</p>', unsafe_allow_html=True)
     
     # List existing
-    resp = make_request("GET", "/documents/list?doc_type=reference")
+    resp = make_request("GET", "/api/documents/list?doc_type=reference")
     if resp and resp.status_code == 200:
         docs = resp.json()
         if docs:
