@@ -86,13 +86,13 @@ def show_login():
             if submit:
                 response = make_request(
                     "POST", 
-                    "/auth/login",
+                    "/api/auth/login",
                     data={"username": email, "password": password}
                 )
                 if response and response.status_code == 200:
                     data = response.json()
                     st.session_state.token = data["access_token"]
-                    st.session_state.user_email = email
+                    st.session_state.user_email = new_email
                     st.session_state.current_page = "dashboard"
                     st.rerun()
                 else:
@@ -109,7 +109,7 @@ def show_login():
             if signup_submit:
                 response = make_request(
                     "POST",
-                    "/auth/signup",
+                    "/api/auth/signup",
                     json={
                         "email": new_email,
                         "password": new_password,
