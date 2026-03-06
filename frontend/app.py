@@ -116,13 +116,17 @@ def show_login():
                         "company_name": company
                     }
                 )
+
                 if response and response.status_code == 200:
-                    st.success("✅ Account created successfully! Please login.")
+                    st.success("Account created successfully! Please login.")
+                    st.session_state.user_email = new_email
                     st.session_state.current_page = "login"
                     st.rerun()
                 else:
-                    st.error("Could not create account")
-
+                    if response:
+                        st.error(f"Signup failed: {response.text}")
+                    else:
+                        st.error("Backend connection failed")
 def show_dashboard():
     """Main dashboard."""
     st.markdown(f'<p class="main-header">📋 Dashboard - {st.session_state.user_email}</p>', unsafe_allow_html=True)
