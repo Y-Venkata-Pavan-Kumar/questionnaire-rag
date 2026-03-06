@@ -7,8 +7,7 @@ from sentence_transformers import SentenceTransformer
 import numpy as np
 import logging
 logger = logging.getLogger(__name__)
-from app.config import settings
-
+from backend.app.config import settings
 logger = logging.getLogger(__name__)
 EMBED_MODEL = SentenceTransformer("all-MiniLM-L6-v2")
 class RAGEngine:
