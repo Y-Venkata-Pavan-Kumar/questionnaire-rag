@@ -109,7 +109,7 @@ pybase64==1.4.3
 pycparser==3.0
 pydantic==2.7.4
 pydantic-settings==2.13.1
-pydantic_core==2.41.5
+pydantic_core==2.18.4
 pydeck==0.9.1
 Pygments==2.19.2
 pypdf==6.7.5
