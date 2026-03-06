@@ -216,7 +216,7 @@ def show_upload():
 
                 ref_response = make_request(
                     "POST",
-                    "/documents/upload",
+                    "/api/documents/upload",
                     files=files,
                     data=data
                 )
@@ -236,14 +236,14 @@ def show_upload():
             # Upload questionnaire
             files = {"file": (q_file.name, q_file.getvalue(), q_file.type)}
             data = {"title": title}
-            q_response = make_request("POST", "/questionnaires/upload", files=files, data=data)
+            q_response = make_request("POST", "/api/questionnaires/upload", files=files, data=data)
             
             if q_response and q_response.status_code == 200:
                 result = q_response.json()
                 q_id = result["questionnaire_id"]
                 
                 # Process with AI
-                process_response = make_request("POST", f"/questionnaires/{q_id}/process")
+                process_response = make_request("POST", f"/api/questionnaires/{q_id}/process")
                 
                 if process_response and process_response.status_code == 200:
                     st.success("✅ Questionnaire processed!")
