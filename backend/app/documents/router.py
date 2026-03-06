@@ -6,11 +6,11 @@ import uuid
 import logging
 logger = logging.getLogger(__name__)
 try:
-    from app.database import get_db
-    from app.auth.router import get_current_user
-    from app.documents import models, processor, chunker
-    from app.rag.engine import RAGEngine
-    from app.config import settings
+    from backend.app.database import get_db
+    from backend.app.auth.router import get_current_user
+    from backend.app.documents import models, processor, chunker
+    from backend.app.rag.engine import RAGEngine
+    from backend.app.config import settings
 except ImportError:
     from backend.app.database import get_db
     from backend.app.auth.router import get_current_user

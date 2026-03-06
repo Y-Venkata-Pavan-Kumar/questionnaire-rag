@@ -3,7 +3,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 try:
-    from app.config import settings
+    from backend.app.config import settings
 except ImportError:
     from backend.app.config import settings
 

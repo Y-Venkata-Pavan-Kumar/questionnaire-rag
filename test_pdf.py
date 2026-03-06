@@ -5,7 +5,7 @@ sys.path.append('backend')
 PDF_PATH = r"C:\Users\yvpaw\OneDrive\Desktop\VENDOR_SECURITY_ASSESSMENT.pdf"
 
 try:
-    from app.documents.processor import DocumentProcessor
+    from backend.app.documents.processor import DocumentProcessor
     
     print(f"Testing PDF: {PDF_PATH}")
     
