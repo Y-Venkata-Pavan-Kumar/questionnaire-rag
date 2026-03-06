@@ -6,6 +6,8 @@ requests
 sentence-transformers
 huggingface-hub
 
+sentence-transformers==2.7.0
+
 groq
 
 pydantic
