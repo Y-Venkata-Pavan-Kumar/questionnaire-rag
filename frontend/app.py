@@ -92,7 +92,7 @@ def show_login():
                 if response and response.status_code == 200:
                     data = response.json()
                     st.session_state.token = data["access_token"]
-                    st.session_state.user_email = new_email
+                    st.session_state.user_email = email
                     st.session_state.current_page = "dashboard"
                     st.rerun()
                 else:
