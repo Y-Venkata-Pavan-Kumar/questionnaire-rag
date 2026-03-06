@@ -406,7 +406,7 @@ streamlit run frontend/app.py
 # 14. Live Demo
 
 Live Application
-(Add your Render deployment link)
+(Render deployment link)
 
 ---
 
