@@ -1,0 +1,18 @@
+# Reference Documents
+
+These documents represent internal security and operational policies for the fictional company **DataVault Analytics**.
+
+They serve as the **knowledge base used by the RAG system** to answer security questionnaires.
+
+## Documents Included
+
+* Access Control Policy
+* Backup and Disaster Recovery Policy
+* Data Handling and Retention Policy
+* Incident Response Plan
+* Information Security Policy
+* Infrastructure Security Policy
+* Security Governance Policy
+* Vendor Risk Management Policy
+
+These documents simulate real enterprise security documentation used during vendor security assessments.
